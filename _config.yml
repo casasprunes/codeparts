@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   A blog about web development, to share code and proof of concept projects with friends and workmates.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://code.parts" # the base hostname & protocol for your site
-github_repository: pcasas/codeparts
+github_repository: casasprunes/codeparts
 permalink: pretty
 excerpt_separator: "<!--more-->"
 sass:
