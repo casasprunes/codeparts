@@ -9,7 +9,7 @@
 title: Code Parts
 email: 
 description: > # this means to ignore newlines until "baseurl:"
-  A blog about web development, to share code and proof of concept projects with friends and workmates.
+  A personal project to share code with colleagues and workmates.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://code.parts" # the base hostname & protocol for your site
 github_repository: casasprunes/codeparts
