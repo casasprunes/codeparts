@@ -112,17 +112,10 @@ h2, h3 {
  * Page aside
  */
 main {
-  width: 70%;
-  float: right;
-
-  @include media-query($on-laptop) {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 aside {
-  width: 29%;
-
   > h2 {
     font-size : 18px;
     font-weight: bold;
@@ -133,9 +126,7 @@ aside {
     margin: 0;
   }
 
-  @include media-query($on-laptop) {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .social-media-list {
