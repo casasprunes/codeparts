@@ -14,7 +14,7 @@ h2, h3 {
  * Site header
  */
 .site-header {
-  padding: 25px 0;
+  padding: 20px 0;
   border-bottom: 1px solid $grey-color-light;
 
   @include media-query($on-palm) {
@@ -50,8 +50,8 @@ h2, h3 {
 }
 
 .site-title {
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 40px;
+  line-height: 40px;
   margin: 0;
 
   &, &:visited {
@@ -180,7 +180,7 @@ aside {
  * Posts
  */
 .post-header {
-  margin-bottom: $spacing-unit;
+  margin-bottom: $spacing-unit / 2;
 }
 
 .post-title  {
@@ -212,7 +212,7 @@ a.post-tag {
 
 .site-nav {
   float: right;
-  line-height: 60px;
+  line-height: 40px;
 
   .nav-trigger {
     display: none;
@@ -282,6 +282,23 @@ a.post-tag {
         margin-right: 0;
       }
       margin-left: 20px;
+    }
+  }
+}
+
+
+
+/**
+ * Highlighting code
+ */
+.highlight {
+  @include media-query($on-laptop) {
+    pre, code {
+      font-size: 12px;
+    }
+
+    pre {
+      padding: 4px 6px;
     }
   }
 }
