@@ -23,3 +23,8 @@ markdown: kramdown
 port: 4001
 plugins:
   - jekyll-sitemap
+
+social_links:
+  github: casasprunes
+  linkedin: casasprunes
+  twitter: casasprunes

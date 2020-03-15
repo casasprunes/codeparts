@@ -109,6 +109,14 @@ a {
       fill: $text-color;
     }
   }
+
+  .social-media-list &:hover {
+    text-decoration: none;
+
+    .username {
+      text-decoration: underline;
+    }
+  }
 }
 
 
