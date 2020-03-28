@@ -175,6 +175,11 @@ aside {
     margin-bottom: $spacing-unit;
   }
 
+  ul {
+    margin-bottom: $spacing-unit / 3;
+    list-style-type: disc;
+  }
+
   :last-child {
     margin: 0;
   }
@@ -196,6 +201,22 @@ aside {
   @include media-query($on-laptop) {
     font-size: 26px;
   }
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-bottom: $spacing-unit / 2;
+}
+
+th, td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+  text-align: left;
+}
+
+tr:nth-child(2n) {
+    background-color: #f6f8fa;
 }
 
 
