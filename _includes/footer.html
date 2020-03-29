@@ -6,15 +6,12 @@
 
   <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend:site.baseurl }}">via RSS</a></p>
 
-  <div class="social-links">
-    {%- assign social = site.social_links -%}
-
-    <ul class="social-media-list">
-      {%- if social.github -%}<li><a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a></li>{%- endif -%}
-      {%- if social.linkedin -%}<li><a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" title="{{ social.linkedin | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg></a></li>{%- endif -%}
-      {%- if social.twitter -%}<li><a rel="me" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg></a></li>{%- endif -%}
-    </ul>
-  </div>
+  {%- assign social = site.social_links -%}
+  <p>
+    twitter: <a rel="me" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }}">@casasprunes</a><br/>
+    github: <a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}">github.com/casasprunes</a><br/>
+    linkedin: <a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" title="{{ social.linkedin | escape }}">linkedin.com/in/casasprunes</a>
+  </p>
 
   <div class="license">
     Copyright Code Parts © 2020
