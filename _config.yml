@@ -17,12 +17,15 @@ permalink: pretty
 excerpt_separator: "<!--more-->"
 sass:
   style: compressed
+jekyll_tidy:
+  compress_html: false
 
 # Build settings
 markdown: kramdown
 port: 4001
 plugins:
   - jekyll-sitemap
+  - jekyll-tidy
 
 social_links:
   github: casasprunes
