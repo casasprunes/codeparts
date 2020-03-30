@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /tag/
+
+Sitemap: https://code.parts/sitemap.xml

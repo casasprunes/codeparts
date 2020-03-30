@@ -19,6 +19,12 @@ sass:
   style: compressed
 jekyll_tidy:
   compress_html: false
+defaults:
+  -
+    scope:
+      path:            "tag/**"
+    values:
+      sitemap:         false
 
 # Build settings
 markdown: kramdown
