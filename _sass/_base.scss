@@ -1,18 +1,12 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure  {
+body, h1, h2, h3, p, pre, ul, figure {
   margin: 0;
   padding: 0;
 }
 
+h1, h2, h3, pre, figure, p, ul, %vertical-rhythm {
+  margin-bottom: $spacing-unit / 3;
+}
 
-
-/**
- * Basic styling
- */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
@@ -24,51 +18,12 @@ body {
   font-kerning: normal;
 }
 
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-blockquote, pre,
-figure,
-%vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
-}
-
-p, ul, ol, dl {
-  margin-bottom: $spacing-unit / 3;
-}
-
-
-
-/**
- * Lists
- */
-ul, ol {
-  margin-left: $spacing-unit;
-}
-
-
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
-}
-
-
-
-/**
- * Links
- */
 a {
   color: $brand-color;
   text-decoration: none;
 
   &:visited {
-    color: $brand-color-dark;
+    color: $brand-color;
   }
 
   &:hover {
@@ -76,37 +31,6 @@ a {
   }
 }
 
-
-
-/**
- * Code formatting
- */
-pre,
-code {
-  font-size: 15px;
-  border-radius: 3px;
-}
-
-code {
-  padding: 1px 5px;
-}
-
-pre {
-  padding: 8px 12px;
-  overflow-x: auto;
-
-  > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-
-
-/**
- * Wrapper
- */
 .wrapper {
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -124,33 +48,10 @@ pre {
   }
 }
 
-
-
-/**
- * Clearfix
- */
 %clearfix {
   &:after {
     content: "";
     display: table;
     clear: both;
-  }
-}
-
-
-
-/**
- * Icons
- */
-.icon {
-  > svg {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-
-    path {
-      fill: $brand-color;
-    }
   }
 }

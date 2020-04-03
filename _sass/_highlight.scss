@@ -32,9 +32,6 @@ $deleted: $apple-blossom !default;
 $header: $hippie-blue !default;
 $annotation: #BBB529 !default;
 
-/**
- * Syntax highlighting styles
- */
 .highlight {
   color: $plaintext;
 
@@ -58,17 +55,30 @@ $annotation: #BBB529 !default;
   .na { color: $name-attribute; }
   .m, .mf, .mh, .mi, .il, .mo, .mb, .mx { color: $literal; }
   .ss { color: $string; }
-}
 
-.highlight {
-  pre, code {
-    background-color: #2b2b2b;
-    border-color: #2b2b2b;
+  @include media-query($on-laptop) {
+    pre, code {
+      font-size: 12px;
+    }
+
+    pre {
+      padding: 4px 6px;
+    }
   }
 }
 
 p code.highlighter-rouge {
-  background-color: #2b2b2b;
-  border-color: #2b2b2b;
   color: $plaintext;
+  padding: 1px 5px;
+}
+
+pre, code {
+  font-size: 15px;
+  background-color: #2b2b2b;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
 }

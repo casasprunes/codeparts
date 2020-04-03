@@ -8,7 +8,7 @@ layout: default
 
     {% for post in site.posts %}
       {% if post.tags contains tag %}
-      <li>
+      <li class="post-list-item">
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
         <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
         {{ post.content }}
