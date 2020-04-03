@@ -44,7 +44,7 @@ $annotation: #BBB529 !default;
   .p, .pi { color: $plaintext; }
   .gi { color: $string; }
   .gd { color: $deleted; }
-  .gh { color: $header; font-weight: bold; }
+  .gh { color: $header; font-weight: 700; }
   .k, .kn, .kp, .kr, .kv { color: $keyword; }
   .kc, .kt, .kd, .err { color: $keyword-type; }
   .s, .sb, .sc, .sd, .s2, .sh, .sx, .s1 { color: $string; }

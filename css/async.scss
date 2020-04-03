@@ -1,10 +1,10 @@
 ---
-# Main css
+# Asynchronous css
 ---
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "variables",
-        "base",
-        "header",
-        "post"
+        "footer",
+        "highlight",
+        "table"
 ;

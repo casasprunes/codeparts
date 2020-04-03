@@ -11,7 +11,10 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico" >
 
+  <link rel="preload" href="{{ "/css/async.css" | prepend: site.baseurl }}" as="style">
+  <link rel="stylesheet" href="{{ "/css/async.css" | prepend: site.baseurl }}">
+
   {% if page.layout == 'tag' %}
-  <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex">
   {% endif %}
 </head>
