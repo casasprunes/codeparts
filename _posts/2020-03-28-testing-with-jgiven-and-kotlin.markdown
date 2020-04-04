@@ -3,6 +3,7 @@ layout: post
 title:  "Testing with JGiven and Kotlin"
 date:   2020-03-28 13:00:00 +0100
 tags: kotlin jgiven
+excerpt: "JGiven helps us to create tests with a BDD approach. It gives us the necessary tools to build our own fluent, domain-specific API."
 ---
 JGiven helps us to create tests with a BDD approach. It gives us the necessary tools to build our own fluent, domain-specific API and defines a clear way of writing tests divided into three sections:
 * _given_ some state   

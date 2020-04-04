@@ -17,4 +17,12 @@
   {% if page.layout == 'tag' %}
     <meta name="robots" content="noindex">
   {% endif %}
+
+  {% if page.layout == 'default' %}
+    {% include homeJSONLD.html %}
+  {% endif %}
+
+  {% if page.layout == 'post' %}
+    {% include postJSONLD.html %}
+  {% endif %}
 </head>

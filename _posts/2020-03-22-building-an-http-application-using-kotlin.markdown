@@ -3,6 +3,7 @@ layout: post
 title:  "Building an HTTP application using Kotlin"
 date:   2020-03-22 22:45:00 +0100
 tags: kotlin ratpack
+excerpt: "Using Kotlin along with Ratpack we can easily create a self-hosted server application that accepts HTTP requests."
 ---
 
 Using Kotlin along with Ratpack we can easily create a self-hosted server application that accepts HTTP requests. 
