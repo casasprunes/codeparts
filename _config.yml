@@ -34,7 +34,18 @@ plugins:
   - jekyll-sitemap
   - jekyll-tidy
 
-social_links:
-  github: casasprunes
-  linkedin: casasprunes
-  twitter: casasprunes
+social:
+  github: "https://github.com/casasprunes"
+  linkedin: "https://www.linkedin.com/in/casasprunes"
+  twitter: "https://twitter.com/casasprunes"
+
+author:
+  name: "Pau Casas Prunés"
+  description: "I am an experienced Software Engineer with 10+ years of strong hands-on experience in the JVM stack with Kotlin, Groovy and Java. Advocate and practitioner of Lean/Agile principles and best practices in Software Development like Pair Programming, TDD, Refactoring, Simple Design, Trunk Based Development, CI/CD among others."
+  given_name: "Pau"
+  family_name: "Casas Prunés"
+
+organization:
+  name: "Code Parts"
+  description: "A personal project to share code with colleagues and workmates."
+  logo: "/assets/logo.png"

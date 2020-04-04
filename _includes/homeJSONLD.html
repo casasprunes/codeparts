@@ -8,31 +8,32 @@
         "isAccessibleForFree": "True",
         "isPartOf": {
             "@type": ["CreativeWork", "Product"],
-            "name": "Code Parts",
+            "name": "{{ site.organization.name }}",
             "productID": "{{ site.product_id }}"
         },
         "discussionUrl": "https://twitter.com/search?f=tweets&vertical=default&q=to%3Acasasprunes&l=en&src=typd",
         "author": {
             "@type": "Person",
-            "name": "Pau Casas Prunés",
-            "description": "I am an experienced Software Engineer with 10+ years of strong hands-on experience in the JVM stack with Kotlin, Groovy and Java. Advocate and practitioner of Lean/Agile principles and best practices in Software Development like Pair Programming, TDD, Refactoring, Simple Design, Trunk Based Development, CI/CD among others.",
-            "givenName": "Pau",
-            "familyName": "Casas Prunés",
+            "name": "{{ site.author.name }}",
+            "description": "{{ site.author.description }}",
+            "givenName": "{{ site.author.given_name }}",
+            "familyName": "{{ site.author.family_name }}",
             "url": "{{ prepend: site.baseurl | prepend: site.url }}",
             "sameAs" : [
-                "https://twitter.com/{{ site.social_links.twitter }}",
-                "https://github.com/{{ site.social_links.github }}",
-                "https://www.linkedin.com/in/{{ site.social_links.linkedin }}"
+                "{{ site.social.twitter }}",
+                "{{ site.social.github }}",
+                "{{ site.social.linkedin }}"
             ]
         },
         "inLanguage": "en-US",
         "license": "http://creativecommons.org/licenses/by-sa/4.0/",
         "additionalType": "CreativeWork",
-        "alternateName": "Code Parts",
+        "alternateName": "{{ site.organization.name }}",
         "publisher": {
             "@type": "Organization",
-            "name": "Code Parts",
-            "description": "A personal project to share code with colleagues and workmates.",
+            "name": "{{ site.organization.name }}",
+            "description": "{{ site.organization.description }}",
+            "logo": "{{ site.organization.logo | prepend: site.url }}",
             "sameAs": "{{ prepend: site.baseurl | prepend: site.url }}"
         }
     }

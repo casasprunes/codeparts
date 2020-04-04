@@ -6,11 +6,10 @@
 
   <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend:site.baseurl }}">via RSS</a></p>
 
-  {%- assign social = site.social_links -%}
   <p>
-    twitter: <a rel="me" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }}">@casasprunes</a><br/>
-    github: <a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}">github.com/casasprunes</a><br/>
-    linkedin: <a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" title="{{ social.linkedin | escape }}">linkedin.com/in/casasprunes</a>
+    twitter: <a rel="me" href="{{ site.social.twitter }}" title="@casasprunes">@casasprunes</a><br/>
+    github: <a rel="me" href="{{ site.social.github }}" title="github.com/casasprunes">github.com/casasprunes</a><br/>
+    linkedin: <a rel="me" href="{{ site.social.linkedin }}" title="linkedin.com/in/casasprunes">linkedin.com/in/casasprunes</a>
   </p>
 
   <div class="license">

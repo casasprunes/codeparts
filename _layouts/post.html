@@ -2,13 +2,20 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <a itemprop="mainEntityOfPage" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="post-link">
+      <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
+    </a>
+
+    <meta itemprop="headline" content="{{ page.title }}" />
+    <meta itemprop="image" content="{{ site.organization.logo | prepend: site.url }}" />
+    <meta itemprop="description" content="{{ page.excerpt }}" />
+    <meta itemprop="isAccessibleForFree" content="True" />
+    <meta itemprop="license" content="http://creativecommons.org/licenses/by-sa/4.0/" />
 
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-      {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+      <meta itemprop="dateModified" content="{% if page.modified %}{{page.modified}}{% else %}{{page.date}}{% endif %}" />
     </p>
 
     <div>
@@ -20,4 +27,22 @@ layout: default
 
   <div itemprop="articleBody">{{ content }}</div>
 
+  <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="{{ site.author.name }}" />
+    <meta itemprop="description" content="{{ site.author.description }}" />
+    <meta itemprop="givenName" content="{{ site.author.given_name }}" />
+    <meta itemprop="familyName" content="{{ site.author.family_name }}" />
+    <meta itemprop="url" content="{{ site.url }}" />
+    <meta itemprop="sameAs" content="{{ site.social.twitter }}" />
+    <meta itemprop="sameAs" content="{{ site.social.github }}" />
+    <meta itemprop="sameAs" content="{{ site.social.linkedin }}" />
+  </div>
+
+  <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="{{ site.organization.name }}" />
+    <meta itemprop="description" content="{{ site.organization.description }}" />
+    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="{{ site.organization.logo | prepend: site.url }}" />
+    </div>
+  </div>
 </article>
