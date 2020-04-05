@@ -22,5 +22,12 @@
     {% include homeJSONLD.html %}
   {% endif %}
 
-
+  {% if page.layout == 'post' %}
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page.excerpt }}" />
+    <meta property="og:image" content="{{ site.author.photo | prepend: site.url }}" />
+    <meta property="og:site_name" content="{{ site.organization.name }}" />
+  {% endif %}
 </head>
