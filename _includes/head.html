@@ -29,5 +29,8 @@
     <meta property="og:description" content="{{ page.excerpt }}" />
     <meta property="og:image" content="{{ site.author.photo | prepend: site.url }}" />
     <meta property="og:site_name" content="{{ site.organization.name }}" />
+    <meta name="twitter:site" content="{{ site.social.twitter_user }}" />
+    <meta name="twitter:creator" content="{{ site.social.twitter_user }}" />
+    <meta name="twitter:card" content="summary"/>
   {% endif %}
 </head>

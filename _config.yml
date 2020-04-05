@@ -18,8 +18,6 @@ permalink: pretty
 excerpt_separator: "<!--more-->"
 sass:
   style: compressed
-jekyll_tidy:
-  compress_html: false
 defaults:
   -
     scope:
@@ -38,6 +36,7 @@ social:
   github: "https://github.com/casasprunes"
   linkedin: "https://www.linkedin.com/in/casasprunes"
   twitter: "https://twitter.com/casasprunes"
+  twitter_user: "@casasprunes"
 
 author:
   name: "Pau Casas Prunés"
