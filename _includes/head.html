@@ -27,10 +27,10 @@
     <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.excerpt }}" />
-    <meta property="og:image" content="{{ site.author.photo | prepend: site.url }}" />
+    <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.url }}{% else %}{{ site.author.photo | prepend: site.url }}{% endif %}" />
     <meta property="og:site_name" content="{{ site.organization.name }}" />
     <meta name="twitter:site" content="{{ site.social.twitter_user }}" />
     <meta name="twitter:creator" content="{{ site.social.twitter_user }}" />
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="{% if page.card %}{{ page.card }}{% else %}summary{% endif %}"/>
   {% endif %}
 </head>
