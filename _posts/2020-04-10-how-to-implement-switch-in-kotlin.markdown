@@ -5,7 +5,7 @@ date:   2020-04-10 17:00:00 +0100
 tags: kotlin
 excerpt: "The equivalent of the switch statement in Kotlin is the when expression. Let's see an example of how we can use it."
 card: "summary_large_image"
-image: "/assets/how-to-implement-switch-in-kotlin.png"
+image: "/assets/how-to-implement-switch-case-in-kotlin.png"
 ---
 The equivalent of the `switch` statement in Kotlin is the `when` expression. 
 
@@ -22,10 +22,10 @@ Let's see an example of how we can use it for stream processing:
 // File: preferences-service/src/main/kotlin/parts/code/piggybox/preferences/streams/suppliers/RecordTransformer.kt
 override fun transform(key: String, record: SpecificRecord): KeyValue<String, SpecificRecord>? {
     val result = when (record) {
-        is CreatePreferencesCommand -> transform(record)
-        is ChangeCountryCommand -> transform(record)
-        is AddFundsCommand -> transform(record)
-        is BuyGameCommand -> transform(record)
+        is CreatePreferencesCommand -> createPreferences(record)
+        is ChangeCountryCommand -> changeCountry(record)
+        is AddFundsCommand -> addFunds(record)
+        is BuyGameCommand -> buyGame(record)
         else -> unknown()
     }
 
@@ -39,7 +39,7 @@ override fun transform(key: String, record: SpecificRecord): KeyValue<String, Sp
 }
 {% endhighlight %}
 
-Stream processing is the continuous processing of data directly as it is produced or received, for this type of use case the `when` expression is especially useful because we are processing records to apply some transformation to them depending on their type and then returning the result.
+Stream processing is the continuous processing of data directly as it is produced or received, for this type of use case the `when` expression is especially useful. We read Avro records from a Kafka topic and depending on the type of record we do a certain action which can result on a new event or command being created and published in another topic.
 
 The full source code is available [on GitHub][github].
 
