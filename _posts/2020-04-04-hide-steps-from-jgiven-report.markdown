@@ -24,9 +24,9 @@ fun `should add funds to a customer`() {
 }
 {% endhighlight %}
 
-As we can see, it makes use of a method called `applicationsUnderTest` which is used to pass to the different stages a reference to the applications under test. This call is more of a technical necessity for the tests to function than behavior that must be tested. Therefore we are not interested in it appearing in the reports.
+As we can see, it makes use of a method called *applicationsUnderTest* which is used to pass to the different stages a reference to the applications under test. This call is more of a technical necessity for the tests to function than behavior that must be tested. Therefore we are not interested in it appearing in the reports.
 
-For these cases JGiven offers us the option to hide steps using the `@Hidden` annotation as follows:
+For these cases JGiven offers us the option to hide steps using the *@Hidden* annotation as follows:
 
 {% highlight kotlin %}
 // File: integration-tests/src/test/kotlin/parts/code/piggybox/integration/tests/features/stage/Given.kt
@@ -41,7 +41,7 @@ open fun applicationsUnderTest(applicationsUnderTest: ApplicationsUnderTest): Gi
 }
 {% endhighlight %}
 
-When doing so, the `applicationsUnderTest` method will be completely hidden from the reports, as we can see below:
+When doing so, the *applicationsUnderTest* method will be completely hidden from the reports, as we can see below:
 
 {% highlight txt %}
  Should add funds to a customer

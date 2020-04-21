@@ -11,9 +11,9 @@ I have a lot of fun coding in Kotlin, so usually, especially in my spare time, I
 
 When I started [piggybox][github], I decided to use Kotlin, with JUnit 5 and JGiven for the Integration Tests. JGiven gave me the [BDD approach][bdd] that I wanted, making the tests behaviour-focused and human-readable and Kotlin gave me the fun of being able to use Kotlin's cool features.
 
-But some minor details were bothering me, like not being able to use the `$` symbol in the method names. JGiven uses the `$` symbol to generate reports, and Kotlin didn't allow me to use it, but I found a workaround, I could use the `@As` annotation to add any description I wanted for the reports, and in here it was allowed to use the `$` symbol.
+But some minor details were bothering me, like not being able to use the *$* symbol in the method names. JGiven uses the *$* symbol to generate reports, and Kotlin didn't allow me to use it, but I found a workaround, I could use the *@As* annotation to add any description I wanted for the reports, and in here it was allowed to use the *$* symbol.
 
-Then I came across another annoying detail, JGiven has a method called `when()` that I needed to use to write the tests in a BDD style, but `when` is a reserved keyword in Kotlin so I couldn't use it. Fortunately, I found another workaround, we can add quotes around it, and it works, but then the code looks messy as we can see in the following example:
+Then I came across another annoying detail, JGiven has a method called *when()* that I needed to use to write the tests in a BDD style, but *when* is a reserved keyword in Kotlin so I couldn't use it. Fortunately, I found another workaround, we can add quotes around it, and it works, but then the code looks messy as we can see in the following example:
 
 {% highlight kotlin %}
 @Test

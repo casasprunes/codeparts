@@ -5,7 +5,7 @@ date:   2020-03-08 20:00:00 +0100
 tags: kotlin kafka ratpack
 excerpt: "A Read Model built in this way could safely be discarded and rebuilt from scratch whenever it has to change, due to bugs or new requirements."
 ---
-Using Kafka Streams State Stores and Ratpack we can create a Read Model for our applications. Let's start by defining a stream that reads events from the `balance` topic and process them by using the `balanceReadModel` State Store.
+Using Kafka Streams State Stores and Ratpack we can create a Read Model for our applications. Let's start by defining a stream that reads events from the *balance* topic and process them by using the *balanceReadModel* State Store.
 
 {% highlight kotlin %}
 // File: parts/code/piggybox/query/modules/KafkaModule.kt
@@ -39,7 +39,7 @@ return KafkaStreams(builder.build(), properties)
 {% endhighlight %}
 
 The processor waits for Domain Events to happen and updates the Read Model accordingly. 
-As we can see in the following example, each time we process a `FundsAdded` event for a customer, this customer's Balance is increased and stored in the Read Model.
+As we can see in the following example, each time we process a *FundsAdded* event for a customer, this customer's Balance is increased and stored in the Read Model.
 
 {% highlight kotlin %}
 // File: parts/code/piggybox/query/streams/suppliers/RecordProcessor.kt
@@ -98,7 +98,7 @@ object QueryServiceApplication {
 }
 {% endhighlight %}
 
-We have only one endpoint `api/customers.getBalance` which given a JSON payload with the `customerId`, searches the Read Model and returns the customer's Balance.
+We have only one endpoint *api/customers.getBalance* which given a JSON payload with the *customerId*, searches the Read Model and returns the customer's Balance.
 
 {% highlight kotlin %}
 // File: parts/code/piggybox/query/api/APIEndpoints.kt
@@ -137,7 +137,7 @@ class CustomersGetBalanceHandler @Inject constructor(
 {% endhighlight %}
 
 A Read Model built in this way could safely be discarded and rebuilt from scratch whenever it has to change, due to bugs or new requirements. 
-As a consequence of our `balance` topic being treated as an Event Store and having infinite retention, we could create a new read model at any time and it would retroactively include everything from the past.
+As a consequence of our *balance* topic being treated as an Event Store and having infinite retention, we could create a new read model at any time and it would retroactively include everything from the past.
 
 The full source code is available [on GitHub][github].
 

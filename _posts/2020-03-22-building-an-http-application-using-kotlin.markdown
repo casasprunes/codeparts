@@ -10,7 +10,7 @@ Using Kotlin along with Ratpack we can easily create a self-hosted server applic
  
 Ratpack is a set of Java libraries that facilitate fast, efficient, evolvable and well-tested HTTP applications. It is built on the highly performant and efficient Netty event-driven networking engine.
 
-To start using Ratpack we need to create a `build.gradle` file with the following contents:
+To start using Ratpack we need to create a *build.gradle* file with the following contents:
 
 {% highlight gradle %}
 // File: command-service/build.gradle
@@ -32,9 +32,9 @@ dependencies {
 }
 {% endhighlight %}
 
-Ratpack provides integration with Google Guice, this integration gives us a way to decouple the components of our application. We can factor out the functionality of each API endpoint into its own `Handler`. This makes our code more maintainable and more testable. It's the standard "Dependency Injection" pattern.
+Ratpack provides integration with Google Guice, this integration gives us a way to decouple the components of our application. We can factor out the functionality of each API endpoint into its own *Handler*. This makes our code more maintainable and more testable. It's the standard "Dependency Injection" pattern.
 
-By extending Guice's `AbstractModule` we are overriding the default `configure` method to create bindings for all our handlers.
+By extending Guice's *AbstractModule* we are overriding the default *configure* method to create bindings for all our handlers.
 
 {% highlight kotlin %}
 // File: command-service/src/main/kotlin/parts/code/piggybox/command/modules/WebAPIModule.kt
@@ -49,7 +49,7 @@ class WebAPIModule : AbstractModule() {
 }
 {% endhighlight %}
 
-As we can see in the previous file we are also creating a binding for the `WebAPIEndpoints` class, this class is a Ratpack `Action` that is used to map the endpoints of our Web API with the specific handlers.
+As we can see in the previous file we are also creating a binding for the *WebAPIEndpoints* class, this class is a Ratpack *Action* that is used to map the endpoints of our Web API with the specific handlers.
 
 {% highlight kotlin %}
 // File: command-service/src/main/kotlin/parts/code/piggybox/command/api/WebAPIEndpoints.kt
@@ -64,7 +64,7 @@ class WebAPIEndpoints : Action<Chain> {
 }
 {% endhighlight %}
 
-Finally, we can create the `CommandServiceApplication` object, with the following contents:
+Finally, we can create the *CommandServiceApplication* object, with the following contents:
 
 {% highlight kotlin %}
 // File: command-service/src/main/kotlin/parts/code/piggybox/command/CommandServiceApplication.kt
@@ -92,9 +92,9 @@ object CommandServiceApplication {
 }
 {% endhighlight %}
 
-This will be the entry point of our Web API, we can start it either by executing the run task with Gradle `./gradlew run` on the terminal, or by executing it from our IDE. 
+This will be the entry point of our Web API, we can start it either by executing the run task with Gradle *./gradlew run* on the terminal, or by executing it from our IDE. 
 
-After executing the application, the server will be available via `http://localhost:5050/` and will listen to HTTP calls to the following endpoints:   
+After executing the application, the server will be available via *http://localhost:5050/* and will listen to HTTP calls to the following endpoints:   
 
 | ENDPOINT |
 | ------------------------- |

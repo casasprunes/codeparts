@@ -3,11 +3,17 @@
 }
 
 .post-list-item {
+  margin-top: $spacing-unit;
   margin-bottom: $spacing-unit;
 
   ul {
     margin-bottom: $spacing-unit / 3;
     list-style-type: disc;
+  }
+
+  h2 {
+    line-height: 1;
+    margin-bottom: $spacing-unit / 3;
   }
 }
 
@@ -21,13 +27,14 @@
   margin: 0;
 }
 
-.post-link {
-  font-size: $base-font-size * 2;
-  color: $text-color !important;
+.post .post-meta {
+  margin-bottom: $spacing-unit * 0.5;
+}
 
-  @include media-query($on-laptop) {
-    font-size: 26px;
-  }
+.post-link {
+  font-size: $base-font-size * 1.35;
+  font-weight: 500;
+  color: $text-color !important;
 }
 
 .post-header {
@@ -35,17 +42,26 @@
 }
 
 .post-title  {
-  font-size: $base-font-size * 2;
+  font-size: $base-font-size * 3.5;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-weight: 300;
+  margin-top: $spacing-unit * 1.5;
 
   @include media-query($on-laptop) {
-    font-size: 26px;
+    font-size: $base-font-size * 2.5;
   }
 }
 
+.post-title:first-line {
+  font-weight: bold;
+}
+
 a.post-tag {
-  color: #000;
-  font-size: 12px;
-  background: $grey-color-light;
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  background: #2b2b2b;
   padding: 5px;
   border-radius: 3px;
 

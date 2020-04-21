@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Code Parts - A Blog about Kotlin, Kafka &amp; Other Stuff
+title: Code Parts - A Blog about Kotlin, Kafka and Programming tutorials
 email: 
 description: > # this means to ignore newlines until "baseurl:"
-  A Blog to share code with colleagues and workmates. About Kotlin, JVM, Apache Kafka, and other stuff.
+  A Blog to share code with colleagues and workmates. About Kotlin, JVM, Apache Kafka, and Programming tutorials.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://code.parts" # the base hostname & protocol for your site
@@ -48,5 +48,5 @@ author:
 
 organization:
   name: "Code Parts"
-  description: "A personal project to share code with colleagues and workmates."
+  description: "A Blog about Kotlin, Kafka and Programming tutorials."
   logo: "/assets/logo.png"

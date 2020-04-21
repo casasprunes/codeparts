@@ -7,9 +7,9 @@ excerpt: "The equivalent of the switch statement in Kotlin is the when expressio
 card: "summary_large_image"
 image: "/assets/how-to-implement-switch-case-in-kotlin.png"
 ---
-The equivalent of the `switch` statement in Kotlin is the `when` expression. 
+The equivalent of the *switch* statement in Kotlin is the *when* expression. 
 
-When compared with Java or Groovy, these are for me some ways in which the Kotlin `when` is better:
+When compared with Java or Groovy, these are for me some ways in which the Kotlin *when* is better:
 * a more compact syntax
 * can be used without an argument
 * smart casts
@@ -39,7 +39,7 @@ override fun transform(key: String, record: SpecificRecord): KeyValue<String, Sp
 }
 {% endhighlight %}
 
-Stream processing is the continuous processing of data directly as it is produced or received, for this type of use case the `when` expression is especially useful. We read Avro records from a Kafka topic and depending on the type of record we do a certain action which can result on a new event or command being created and published in another topic.
+Stream processing is the continuous processing of data directly as it is produced or received, for this type of use case the *when* expression is especially useful. We read Avro records from a Kafka topic and depending on the type of record we do a certain action which can result on a new event or command being created and published in another topic.
 
 The full source code is available [on GitHub][github].
 

@@ -1,2 +1,2 @@
 # codeparts
-:seedling: :snail: A personal project to share code with colleagues and workmates
+A Blog about Kotlin, Kafka and Programming tutorials

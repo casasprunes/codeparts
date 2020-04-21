@@ -5,9 +5,10 @@ date:   2020-02-08 22:00:00 +0100
 tags: jekyll sass css
 excerpt: "Jekyll provides built-in support for Sass, a style sheet language, which includes features that extend the functionality of plain static CSS."
 ---
+## 1. Introduction
 [Jekyll][jekyll] provides built-in support for [Sass][sass], a style sheet language, which includes features that extend the functionality of plain static CSS. These are some of the [Sass][sass] features that we can use.
 
-## Variables
+## 2. Variables
 We can use variables to keep colors and font sizes consistent throughout the web site.
 
 {% highlight scss %}
@@ -18,7 +19,7 @@ $base-font-size: 16px;
 $small-font-size: $base-font-size * 0.875;
 {% endhighlight %}
 
-## Nesting
+## 3. Nesting
 Nesting is useful for writing CSS with a clear nested and visual hierarchy.
 
 {% highlight scss %}
@@ -36,10 +37,10 @@ Nesting is useful for writing CSS with a clear nested and visual hierarchy.
 }
 {% endhighlight %}
 
-## Partials
+## 4. Partials
 Partial [Sass][sass] files contain little snippets of CSS that can be included in other [Sass][sass] files. This is a great way to modularize the CSS, keeping things easier to maintain.
 
-## Import
+## 5. Import
 [Sass][sass] import can be used to concatenate all partials into a single file. The main benefit of a single style sheet is that it reduces the number of server requests when first loading the page.
 
 {% highlight scss %}
@@ -50,7 +51,7 @@ Partial [Sass][sass] files contain little snippets of CSS that can be included i
 ;
 {% endhighlight %}
 
-## Compression
+## 6. Compression
 We can take advantage of the file size optimization available with [Sass][sass]. In the `_config.yml` file we can add this line to output compressed CSS.
 
 {% highlight yaml %}
