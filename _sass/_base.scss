@@ -3,7 +3,7 @@ body, h1, h2, h3, p, pre, ul, figure {
   padding: 0;
 }
 
-h1, h3, pre, p, ul, %vertical-rhythm {
+h1, pre, p, ul, %vertical-rhythm {
   margin-bottom: $spacing-unit / 3;
 }
 
@@ -19,6 +19,12 @@ figure {
   margin-top: $spacing-unit;
   margin-bottom: $spacing-unit * 0.5;
   font-size: $base-font-size * 1.5;
+}
+
+.post h3 {
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit * 0.5;
+  font-size: $base-font-size * 1.25;
 }
 
 body {
