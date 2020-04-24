@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Code Parts - A Blog about Kotlin, Kafka and Programming tutorials
+title: Code Parts
 email: 
 description: > # this means to ignore newlines until "baseurl:"
-  A Blog to share code with colleagues and workmates. About Kotlin, JVM, Apache Kafka, and Programming tutorials.
+  A blog about Kotlin, Apache Kafka and other Stuff
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://code.parts" # the base hostname & protocol for your site
@@ -34,19 +34,16 @@ plugins:
   - jekyll-tidy
 
 social:
+  image: "/assets/photo.jpg"
   github: "https://github.com/casasprunes"
   linkedin: "https://www.linkedin.com/in/casasprunes"
   twitter: "https://twitter.com/casasprunes"
   twitter_user: "@casasprunes"
 
-author:
-  name: "Pau Casas Prunés"
-  description: "I am an experienced Software Engineer with 10+ years of strong hands-on experience in the JVM stack with Kotlin, Groovy and Java. Advocate and practitioner of Lean/Agile principles and best practices in Software Development like Pair Programming, TDD, Refactoring, Simple Design, Trunk Based Development, CI/CD among others."
-  given_name: "Pau"
-  family_name: "Casas Prunés"
-  photo: "/assets/photo.jpg"
-
 organization:
   name: "Code Parts"
-  description: "A Blog about Kotlin, Kafka and Programming tutorials."
+  description: "A blog about Kotlin, Apache Kafka and other Stuff"
   logo: "/assets/logo.png"
+
+authors:
+  casasprunes: "Pau Casas Prunés"

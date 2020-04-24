@@ -2,19 +2,35 @@
 layout: default
 ---
 <div>
+  {% capture tag %}{{ page.title | slugify }}{% endcapture %}
+  {% assign count = 0 %}
 
-  <ul class="post-list">
-    {% capture tag %}{{ page.title | slugify }}{% endcapture %}
+  {% for post in site.posts %}
+    {% assign post_tags = post.tags | join: '~~~' | downcase | split: '~~~' %}
 
-    {% for post in site.posts %}
-      {% if post.tags contains tag %}
-      <li class="post-list-item">
-        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt }}</p>
-      </li>
+    {% if post_tags contains tag %}
+      {% assign count = count | plus: 1 %}
+      {% assign mod = count | modulo: 2 %}
+      {% if mod != 0 %}
+      <div class="post-list">
       {% endif %}
-    {% endfor %}
-  </ul>
 
+        <div class="post-list-item">
+          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+          <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></h2>
+          <p>{{ post.excerpt }}</p>
+          <p><a class="post-read" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">Continue reading &rarr;</a></p>
+        </div>
+
+      {% if mod == 0 %}
+      </div>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign mod = count | modulo: 2 %}
+  {% if mod != 0 %}
+    <div class="post-list-item"></div>
+    </div>
+  {% endif %}
 </div>

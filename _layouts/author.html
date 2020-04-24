@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="{{ page.author_name }}" />
+    <meta itemprop="description" content="{{ content | strip_html | strip_newlines }}" />
+    <meta itemprop="givenName" content="{{ page.given_name }}" />
+    <meta itemprop="familyName" content="{{ page.family_name }}" />
+    <meta itemprop="url" content="{{ page.author_url }}" />
+    <meta itemprop="sameAs" content="{{ page.twitter }}" />
+    <meta itemprop="sameAs" content="{{ page.github }}" />
+    <meta itemprop="sameAs" content="{{ page.linkedin }}" />
+    <h1 class="author-title" itemprop="name">{{ page.author_name }}</h1>
+    {{ content }}
+
+    <p>
+        <a rel="me" href="{{ page.twitter }}" title="{{ page.twitter_user }}">{{ page.twitter_user }}</a><br/>
+        <a rel="me" href="http://{{ page.github }}" title="{{ page.github }}">{{ page.github }}</a><br/>
+        <a rel="me" href="http://{{ page.linkedin }}" title="{{ page.linkedin }}">{{ page.linkedin }}</a>
+    </p>
+</div>

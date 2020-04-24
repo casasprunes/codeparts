@@ -2,10 +2,11 @@
 layout: post
 title:  "How to implement switch in Kotlin"
 date:   2020-04-10 17:00:00 +0100
-tags: kotlin
+tags: Kotlin
 excerpt: "The equivalent of the switch statement in Kotlin is the when expression. Let's see an example of how we can use it."
 card: "summary_large_image"
 image: "/assets/how-to-implement-switch-case-in-kotlin.png"
+author: "casasprunes"
 ---
 The equivalent of the *switch* statement in Kotlin is the *when* expression. 
 

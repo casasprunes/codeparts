@@ -2,10 +2,11 @@
 layout: post
 title:  "Integration Tests with Groovy and Spock"
 date:   2020-04-14 22:00:00 +0100
-tags: kotlin jgiven groovy spock
+tags: Kotlin Groovy
 excerpt: "For creating Integration Tests with a BDD approach, using Spock with Groovy and JGiven, I think is an excellent choice."
 card: "summary_large_image"
 image: "/assets/integration-tests-with-groovy-and-spock.png"
+author: "casasprunes"
 ---
 I have a lot of fun coding in Kotlin, so usually, especially in my spare time, I try to use it for everything.
 

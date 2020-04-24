@@ -1,12 +1,21 @@
 ---
 layout: default
 ---
-<ul class="post-list">
-  {% for post in site.posts %}
-    <li class="post-list-item">
-      <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-      <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+    {% assign mod = forloop.index | modulo: 2 %}
+    {% if mod != 0 %}
+    <div class="post-list">
+    {% endif %}
+        <div class="post-list-item">
+            <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+            <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></h2>
+            <p>{{ post.excerpt }}</p>
+            <p><a class="post-read" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">Continue reading &rarr;</a></p>
+        </div>
+        {% if forloop.last and mod != 0 %}
+        <div class="post-list-item"></div>
+        {% endif %}
+    {% if forloop.last or mod == 0 %}
+    </div>
+    {% endif %}
+{% endfor %}

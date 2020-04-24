@@ -12,29 +12,9 @@
             "productID": "{{ site.product_id }}"
         },
         "discussionUrl": "https://twitter.com/search?f=tweets&vertical=default&q=to%3Acasasprunes&l=en&src=typd",
-        "author": {
-            "@type": "Person",
-            "name": "{{ site.author.name }}",
-            "description": "{{ site.author.description }}",
-            "givenName": "{{ site.author.given_name }}",
-            "familyName": "{{ site.author.family_name }}",
-            "url": "{{ prepend: site.baseurl | prepend: site.url }}",
-            "sameAs" : [
-                "{{ site.social.twitter }}",
-                "{{ site.social.github }}",
-                "{{ site.social.linkedin }}"
-            ]
-        },
         "inLanguage": "en-US",
         "license": "http://creativecommons.org/licenses/by-sa/4.0/",
         "additionalType": "CreativeWork",
-        "alternateName": "{{ site.organization.name }}",
-        "publisher": {
-            "@type": "Organization",
-            "name": "{{ site.organization.name }}",
-            "description": "{{ site.organization.description }}",
-            "logo": "{{ site.organization.logo | prepend: site.url }}",
-            "sameAs": "{{ prepend: site.baseurl | prepend: site.url }}"
-        }
+        "alternateName": "{{ site.organization.name }}"
     }
 </script>

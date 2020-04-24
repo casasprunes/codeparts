@@ -1,19 +1,28 @@
 <footer>
 
-  <h2>About</h2>
+  <div class="wrapper">
+    <div class="footer-list">
+      <div class="footer-list-item">
+        <p class="footer-list-item-title"><strong>CODE</strong><span>PARTS</span></p>
+        <p>A blog about Kotlin, Kafka and programming tutorials.</p>
+        <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend:site.baseurl | prepend: site.url }}">via RSS</a></p>
+      </div>
+      <div class="footer-list-item">
+        <p class="footer-list-item-title">ABOUT</p>
+        <p><a href="{{ site.social.github }}">Github</a></p>
+        <p><a href="{{ site.social.twitter }}">Twitter</a></p>
+        <p><a href="{{ site.social.linkedin }}">LinkedIn</a></p>
+        <p><a href="{{ site.baseurl | prepend: site.url }}/authors/casasprunes">About</a></p>
+      </div>
+      <div class="footer-list-item">
+        <p class="footer-list-item-title">TAGS</p>
+        {% for tag in site.tags %}
+        <p><a href="{{ '/tag/' | append:tag[0] }}" rel="tag">{{ tag[0] }}</a></p>
+        {% endfor %}
+      </div>
+    </div>
 
-  <p>A Blog about Kotlin, Kafka and Programming tutorials</p>
-
-  <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend:site.baseurl }}">via RSS</a></p>
-
-  <p>
-    twitter: <a rel="me" href="{{ site.social.twitter }}" title="@casasprunes">@casasprunes</a><br/>
-    github: <a rel="me" href="{{ site.social.github }}" title="github.com/casasprunes">github.com/casasprunes</a><br/>
-    linkedin: <a rel="me" href="{{ site.social.linkedin }}" title="linkedin.com/in/casasprunes">linkedin.com/in/casasprunes</a>
-  </p>
-
-  <div class="license">
-    Copyright Code Parts © 2020
+    <div class="license">Copyright Code Parts © 2020</div>
   </div>
 
 </footer>

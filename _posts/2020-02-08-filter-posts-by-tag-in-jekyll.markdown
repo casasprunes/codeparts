@@ -2,8 +2,8 @@
 layout: post
 title:  "Filter posts by tag in Jekyll"
 date:   2020-02-08 21:00:00 +0100
-tags: jekyll liquid
 excerpt: "To create a tag archive with Jekyll we can use a tag.html template. This file will be responsible for listing posts with the given tag."
+author: "casasprunes"
 ---
 To create a tag archive with [Jekyll][jekyll] we can use a *tag.html* template. This file will be responsible for listing posts with the given tag. Let's see this with a sample:
 

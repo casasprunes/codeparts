@@ -2,8 +2,9 @@
 layout: post
 title:  "GitHub Actions for a Kotlin project with Kafka and Gradle"
 date:   2020-03-15 19:40:00 +0100
-tags: kotlin kafka gradle
+tags: Kotlin Kafka Gradle
 excerpt: "We can easily set up a continuous integration workflow in GitHub Actions to build and test our Kotlin project with Gradle."
+author: "casasprunes"
 ---
 We can easily set up a continuous integration (CI) workflow in GitHub Actions to build and test our Kotlin project with Gradle.
 To do so, we need to create a file under *.github\workflows\workflow.yml*.

@@ -6,13 +6,13 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_newlines }}{% endif %}">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico" >
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl | prepend: site.url }}/assets/favicon.ico" >
 
-  <link rel="preload" href="{{ "/css/async.css" | prepend: site.baseurl }}" as="style">
-  <link rel="stylesheet" href="{{ "/css/async.css" | prepend: site.baseurl }}">
+  <link rel="preload" href="{{ "/css/async.css" | prepend: site.baseurl | prepend: site.url }}" as="style">
+  <link rel="stylesheet" href="{{ "/css/async.css" | prepend: site.baseurl | prepend: site.url }}">
 
   {% if page.layout == 'tag' %}
     <meta name="robots" content="noindex">
@@ -27,7 +27,7 @@
     <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.excerpt }}" />
-    <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.url }}{% else %}{{ site.author.photo | prepend: site.url }}{% endif %}" />
+    <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.url }}{% else %}{{ site.social.image | prepend: site.url }}{% endif %}" />
     <meta property="og:site_name" content="{{ site.organization.name }}" />
     <meta name="twitter:site" content="{{ site.social.twitter_user }}" />
     <meta name="twitter:creator" content="{{ site.social.twitter_user }}" />

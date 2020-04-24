@@ -2,8 +2,8 @@
 layout: post
 title:  "Sass: Syntactically Awesome Style Sheets with Jekyll"
 date:   2020-02-08 22:00:00 +0100
-tags: jekyll sass css
 excerpt: "Jekyll provides built-in support for Sass, a style sheet language, which includes features that extend the functionality of plain static CSS."
+author: "casasprunes"
 ---
 ## 1. Introduction
 [Jekyll][jekyll] provides built-in support for [Sass][sass], a style sheet language, which includes features that extend the functionality of plain static CSS. These are some of the [Sass][sass] features that we can use.
