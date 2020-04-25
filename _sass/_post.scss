@@ -65,6 +65,14 @@
   }
 }
 
+.author-title {
+  font-size: $base-font-size * 3;
+
+  @include media-query($on-palm) {
+    font-size: $base-font-size * 3.5;
+  }
+}
+
 .post-title:first-line, .author-title:first-line {
   font-weight: bold;
 }
