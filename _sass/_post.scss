@@ -4,6 +4,18 @@
   padding-left: $spacing-unit / 2;
 }
 
+blockquote {
+  font-style: italic;
+  color: $grey-color;
+  border-left: 3px solid #C4C2C2;
+  margin: 0;
+  margin-bottom: $spacing-unit;
+
+  p {
+    padding-left: $spacing-unit / 3;
+  }
+}
+
 .post-list {
   @include media-query($on-palm) {
     display: flex;

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "GitHub Actions for a Kotlin project with Kafka and Gradle"
+title:  "GitHub Actions for a Kotlin project with Kafka"
 date:   2020-03-15 19:40:00 +0100
-tags: Kotlin Kafka Gradle
+tags: DevOps
 excerpt: "We can easily set up a continuous integration workflow in GitHub Actions to build and test our Kotlin project with Gradle."
 author: "casasprunes"
 ---
@@ -24,7 +24,7 @@ on:
 {% endhighlight %}
 
 Next, we have the jobs section with only one job *build* configured to run on Linux, using the GitHub-hosted *ubuntu-latest*.
-The job consists of 5 steps which will in this order: check out the code from github, set up the JDK 1.8, start the docker containers for Zookeeper, Kafka and Schema Registry, grant permissions to execute gradlew and build and run the tests with gradle.
+The job consists of 6 steps which will in this order: check out the code from github, set up the JDK 1.8, analyze the code formatting, start the docker containers for Zookeeper, Kafka and Schema Registry, grant permissions to execute gradlew and build and run the tests with gradle.
 
 {% highlight yml %}
 jobs:
@@ -38,6 +38,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+      - name: Analyze code formatting
+        run: ./gradlew ktlintCheck
       - name: Start Docker containers for Zookeeper, Kafka and Schema Registry
         run: docker-compose up -d
       - name: Grant execute permission for gradlew

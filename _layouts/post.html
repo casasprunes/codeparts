@@ -25,13 +25,6 @@ layout: default
     </div>
   </header>
 
-  {% if page.author %}
-  {% assign author = site.authors | map: page.author %}
-  <div class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <span>by <a href="{{ site.baseurl | prepend: site.url }}/authors/{{ page.author }}"><span itemprop="name">{{ author }}</span></a></span>
-  </div>
-  {% endif %}
-
   <div itemprop="articleBody">{{ content }}</div>
 
   <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
