@@ -3,6 +3,7 @@ layout: post
 title:  "Create a Read Model using Kafka Streams State Stores"
 date:   2020-03-08 20:00:00 +0100
 modified: 2020-06-09 20:00:00 +0100
+last_modified_at: 2020-06-09 20:00:00 +0100
 tags: Kotlin Kafka Ratpack
 excerpt: "A Read Model built in this way could safely be discarded and rebuilt from scratch whenever it has to change, due to bugs or new requirements."
 author: "casasprunes"
