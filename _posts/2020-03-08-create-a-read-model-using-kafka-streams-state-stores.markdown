@@ -2,10 +2,12 @@
 layout: post
 title:  "Create a Read Model using Kafka Streams State Stores"
 date:   2020-03-08 20:00:00 +0100
-modified: 2020-06-09 20:00:00 +0100
-last_modified_at: 2020-06-09 20:00:00 +0100
+modified: 2020-06-13 10:00:00 +0100
+last_modified_at: 2020-06-13 10:00:00 +0100
 tags: Kotlin Kafka Ratpack
 excerpt: "A Read Model built in this way could safely be discarded and rebuilt from scratch whenever it has to change, due to bugs or new requirements."
+card: "summary_large_image"
+image: "/assets/kafka-streams-state-store.png"
 author: "casasprunes"
 ---
 ## 1. Overview
@@ -77,7 +79,7 @@ dependencies {
 
 ### 3.2 Building a KafkaStreams
 
-Once we have configured our build management, let us continue by defining a stream that reads events from the _balance_ topic and process them by using the _BalanceProcessor_ and the _balanceReadModel_ State Store.
+Once we have configured our build management, let us continue by defining a [kafka stream][kafka-streams] that reads events from the _balance_ topic and process them by using the _BalanceProcessor_ and the _balanceReadModel_ State Store.
 
 #### 3.2.1 Configuring KafkaStreams
 
@@ -213,7 +215,7 @@ httpClient.get(uri).then { response ->
 
 ### 4. Conclusion
 
-In this article, we saw how to create a Read Model using Kafka Streams State Stores and how Kafka natively provides all of the required functionality for interactively querying the state of our application, except to allow application instances to communicate over Http for which we must create a Web API.
+In this article, we saw how to create a Read Model using [Kafka Streams][kafka-streams] State Stores and how Kafka natively provides all of the required functionality for interactively querying the state of our application, except to allow application instances to communicate over Http for which we must create a Web API.
 
 A Read Model built in this way could safely be discarded and rebuilt from scratch whenever it has to change, due to bugs or new requirements. 
 As a consequence of our _balance_ topic being treated as an Event Store and having infinite retention, we could create a new read model at any time, and it would retroactively include everything from the past.
@@ -223,3 +225,4 @@ The full source code is available [on GitHub][github].
 [github]: https://github.com/casasprunes/tutorials/tree/master/kafka-interactive-queries
 [rocksdb]: https://rocksdb.org/
 [avro]: https://avro.apache.org/
+[kafka-streams]: /2020/06/13/kafka-streams-kotlin/
