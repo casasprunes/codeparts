@@ -66,9 +66,13 @@ $annotation: #BBB529 !default;
   }
 }
 
-p code.highlighter-rouge {
+code.highlighter-rouge {
   color: $plaintext;
   padding: 1px 5px;
+  background-color: #eee;
+  border-radius: 3px;
+  color: $apple-blossom;
+  word-wrap: break-word;
 }
 
 pre, code {

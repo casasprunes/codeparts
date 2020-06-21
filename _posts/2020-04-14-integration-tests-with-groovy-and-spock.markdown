@@ -10,7 +10,7 @@ author: "casasprunes"
 ---
 I have a lot of fun coding in Kotlin, so usually, especially in my spare time, I try to use it for everything.
 
-When I started [piggybox][github], I decided to use Kotlin, with JUnit 5 and JGiven for the Integration Tests. JGiven gave me the [BDD approach][bdd] that I wanted, making the tests behaviour-focused and human-readable and Kotlin gave me the fun of being able to use Kotlin's cool features.
+When I started [piggybox][github], I decided to use Kotlin, with JUnit 5 and JGiven for the Integration Tests. JGiven gave me the BDD approach that I wanted, making the tests behaviour-focused and human-readable and Kotlin gave me the fun of being able to use Kotlin's cool features.
 
 But some minor details were bothering me, like not being able to use the *$* symbol in the method names. JGiven uses the *$* symbol to generate reports, and Kotlin didn't allow me to use it, but I found a workaround, I could use the *@As* annotation to add any description I wanted for the reports, and in here it was allowed to use the *$* symbol.
 
@@ -39,7 +39,6 @@ For creating Integration Tests with a BDD approach, using Spock with JGiven, I t
 Here we can see how the tests look right now using Spock data tables:
 
 {% highlight groovy %}
-// File: integration-tests/src/test/groovy/parts/code/piggybox/integration/tests/features/AddFundsShould.groovy
 @Unroll
 def "not add #fundsToAdd funds if new balance is greater than 2000"() {
     expect:
@@ -59,6 +58,4 @@ def "not add #fundsToAdd funds if new balance is greater than 2000"() {
 
 The full source code is available [on GitHub][github].
 
-[github]: https://github.com/casasprunes/piggybox
-[bdd]: https://code.parts/2020/03/28/testing-with-jgiven-and-kotlin/
 [github]: https://github.com/casasprunes/piggybox
