@@ -2,6 +2,7 @@
 layout: post
 title:  "Trunk-Based Development in practice"
 date:   2020-05-02 20:00:00 +0100
+modified: 2020-06-21 10:00:00 +0100
 tags: DevOps
 excerpt: "By following this model, we take a more continuous delivery approach to software development, we can release new features quickly while avoiding merge hell."
 author: "casasprunes"
@@ -133,6 +134,13 @@ In this article, we have looked at how to use Trunk-Based Development with short
 
 It's always good to try different models until you find the one that works better for your team.
 
+### References:
+
+* [Introduction to Trunk Based Development][introduction]
+* [Short-Lived Feature Branches][feature-branches]
+
 [tbd]: https://trunkbaseddevelopment.com/
 [paul]: https://twitter.com/paul_hammant
 [workflow]: https://code.parts/2020/03/15/github-actions-for-a-kotlin-project-with-kafka-and-gradle/
+[introduction]: https://trunkbaseddevelopment.com/
+[feature-branches]: https://trunkbaseddevelopment.com/short-lived-feature-branches/

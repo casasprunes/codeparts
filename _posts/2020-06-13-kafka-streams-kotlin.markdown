@@ -2,6 +2,7 @@
 layout: post
 title:  "Introduction to Kafka Streams in Kotlin"
 date:   2020-06-13 10:00:00 +0100
+modified: 2020-06-21 10:00:00 +0100
 tags: Kotlin Kafka
 excerpt: "Learn how to use Kafka Streams in Kotlin, learn about stream transformers, and look at the code step by step."
 card: "summary_large_image"
@@ -141,5 +142,14 @@ In this article, we saw how to create Kafka Streams in Kotlin and how we can tak
 
 The full source code is available [on GitHub][github].
 
+### References:
+
+* [Kafka Streams][kafka-streams]
+* [Developer Guide for Kafka Streams][developer-guide]
+* [Introduction to Kafka Streams][introduction]
+
 [github]: https://github.com/casasprunes/tutorials/tree/master/kafka-streams
 [avro]: https://avro.apache.org/
+[kafka-streams]: https://kafka.apache.org/documentation/streams/
+[developer-guide]: https://kafka.apache.org/25/documentation/streams/developer-guide/
+[introduction]: https://docs.confluent.io/current/streams/introduction.html

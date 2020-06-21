@@ -2,7 +2,7 @@
 layout: post
 title:  "Create a Read Model using Kafka Streams State Stores"
 date:   2020-03-08 20:00:00 +0100
-modified: 2020-06-13 10:00:00 +0100
+modified: 2020-06-21 10:00:00 +0100
 last_modified_at: 2020-06-13 10:00:00 +0100
 tags: Kotlin Kafka Ratpack
 excerpt: "A Read Model built in this way could safely be discarded and rebuilt from scratch whenever it has to change, due to bugs or new requirements."
@@ -222,7 +222,15 @@ As a consequence of our _balance_ topic being treated as an Event Store and havi
 
 The full source code is available [on GitHub][github].
 
+### References:
+
+* [Streams Architecture State][state-stores]
+* [Kafka Streams Interactive Queries][interactive-queries]
+
 [github]: https://github.com/casasprunes/tutorials/tree/master/kafka-interactive-queries
 [rocksdb]: https://rocksdb.org/
 [avro]: https://avro.apache.org/
 [kafka-streams]: /2020/06/13/kafka-streams-kotlin/
+[interactive-queries]: https://docs.confluent.io/current/streams/developer-guide/interactive-queries.html
+[state-stores]: https://docs.confluent.io/current/streams/architecture.html#streams-architecture-state
+
