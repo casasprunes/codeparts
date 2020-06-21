@@ -3,6 +3,7 @@ layout: post
 title:  "Introduction to Kafka Streams in Kotlin"
 date:   2020-06-13 10:00:00 +0100
 modified: 2020-06-21 10:00:00 +0100
+last_modified_at: 2020-06-21 10:00:00 +0100
 tags: Kotlin Kafka
 excerpt: "Learn how to use Kafka Streams in Kotlin, learn about stream transformers, and look at the code step by step."
 card: "summary_large_image"

@@ -3,6 +3,7 @@ layout: post
 title:  "Trunk-Based Development in practice"
 date:   2020-05-02 20:00:00 +0100
 modified: 2020-06-21 10:00:00 +0100
+last_modified_at: 2020-06-21 10:00:00 +0100
 tags: DevOps
 excerpt: "By following this model, we take a more continuous delivery approach to software development, we can release new features quickly while avoiding merge hell."
 author: "casasprunes"
